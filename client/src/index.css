@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 262.1 83.3% 96%;
+    --accent-foreground: 262.1 83.3% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%;
+
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 6.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 6.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262.1 83.3% 65%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 217.2 32.6% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 14%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 262.1 83.3% 20%;
+    --accent-foreground: 262.1 83.3% 80%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom scrollbars for clean research feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Markdown prose enhancements - Light mode */
+.prose-pustak {
+  color: #1e293b;
+  line-height: 1.65;
+}
+
+.prose-pustak p {
+  margin-bottom: 0.75rem;
+}
+
+.prose-pustak h1, .prose-pustak h2, .prose-pustak h3, .prose-pustak h4 {
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-pustak ul, .prose-pustak ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-pustak ul {
+  list-style-type: disc;
+}
+
+.prose-pustak ol {
+  list-style-type: decimal;
+}
+
+.prose-pustak li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-pustak code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #f1f5f9;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: #6d28d9;
+}
+
+.prose-pustak pre {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+.prose-pustak blockquote {
+  border-left: 3px solid #7c3aed;
+  padding-left: 0.75rem;
+  font-style: italic;
+  color: #475569;
+  margin: 0.75rem 0;
+}
+
+/* Markdown prose enhancements - Dark mode */
+.dark .prose-pustak {
+  color: #cbd5e1;
+}
+
+.dark .prose-pustak h1, .dark .prose-pustak h2, .dark .prose-pustak h3, .dark .prose-pustak h4 {
+  color: #f8fafc;
+}
+
+.dark .prose-pustak code {
+  background-color: #1e1b4b;
+  color: #c4b5fd;
+}
+
+.dark .prose-pustak pre {
+  background-color: #020617;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+}
+
+.dark .prose-pustak blockquote {
+  border-left-color: #8b5cf6;
+  color: #94a3b8;
+}
